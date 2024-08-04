@@ -80,6 +80,18 @@
             event.preventDefault(); // Evita el comportamiento predeterminado del enlace
             window.location.href = 'https://gael-hisense.github.io/DiagramaProceso.github.io/'; // Redirige al enlace
         });
+
+        // JavaScript para manejar la visibilidad de los botones
+        document.querySelectorAll('.process h2').forEach(function(processHeader) {
+            processHeader.addEventListener('click', function() {
+                var items = this.nextElementSibling;
+                if (items.style.display === 'none') {
+                    items.style.display = 'block';
+                } else {
+                    items.style.display = 'none';
+                }
+            });
+        });
     </script>
 </body>
 </html>
