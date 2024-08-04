@@ -1,13 +1,15 @@
+/* Cambia el fondo del cuerpo */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #00a86b, #008080); /* Verde azulado a verde oscuro */
+    background: linear-gradient(to bottom right, #0000FF, #00008B); /* De verde a azul */
     min-height: 100vh;
 }
 
+/* Cambia el color de fondo del nav y el logo */
 nav {
-    background-color: #00a86b; /* Teal */
+    background-color: #0000FF; /* De verde a azul */
     color: white;
     display: flex;
     justify-content: space-between;
@@ -19,22 +21,28 @@ nav {
     font-weight: bold;
 }
 
-.menu {
-    display: flex;
-    gap: 1rem;
-}
-
+/* Cambia el color de los enlaces del menú */
 .menu a {
     color: white;
     text-decoration: none;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+/* Cambia el color del botón CTA y su hover */
+.cta-button {
+    background-color: #0000FF; /* De verde a azul */
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.cta-button:hover {
+    background-color: #00008B; /* De verde a azul oscuro */
+}
+
+/* Cambia el color del título principal */
 .main-title {
     color: white;
     font-size: 3rem;
@@ -42,45 +50,14 @@ nav {
     margin-bottom: 2rem;
 }
 
-.processes-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    background-color: rgba(255, 255, 255, 0.1); /* Blanco semi-transparente */
-    backdrop-filter: blur(10px); /* Fondo borroso */
-    padding: 2rem;
-    border-radius: 1rem;
-}
-
-.process {
-    background-color: rgba(255, 255, 255, 0.2); /* Blanco semi-transparente */
-    border-radius: 0.5rem;
-    padding: 1rem;
-    width: 200px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.process:hover {
-    transform: scale(1.05);
-}
-
+/* Cambia el color del texto de los procesos */
 .process h2 {
     color: white;
-    margin: 0;
 }
 
-.process-items {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
+/* Cambia el color de fondo de los botones en los items de proceso */
 .process-items button {
-    background-color: rgba(255, 255, 255, 0.3); /* Blanco semi-transparente */
+    background-color: rgba(255, 255, 255, 0.3);
     border: none;
     padding: 0.5rem;
     color: white;
@@ -89,42 +66,16 @@ nav {
 }
 
 .process-items button:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Blanco más claro */
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
-}
-
+/* Cambia el color del borde y el fondo del modal */
 .modal-content {
-    background-color: #fefefe; /* Blanco */
+    background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888; /* Gris */
+    border: 1px solid #888;
     width: 80%;
     max-width: 500px;
     border-radius: 0.5rem;
-}
-
-.close {
-    color: #aaa; /* Gris claro */
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black; /* Negro */
-    text-decoration: none;
-    cursor: pointer;
 }
