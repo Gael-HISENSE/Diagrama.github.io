@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const processes = document.querySelectorAll('.process');
     const modal = document.getElementById('modal');
     const modalTitle = document.getElementById('modal-title');
-    const modalDescription = document.getElementById('modal-content'); // Se cambió de 'modal-description' a 'modal-content'
+    const modalContent = document.getElementById('modal-content');
     const closeModal = document.querySelector('.close');
 
     const definitions = {
@@ -24,30 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
     processes.forEach(process => {
         process.addEventListener('click', function() {
             const items = this.querySelector('.process-items');
-            if (items.style.display === 'none' || items.style.display === '') {
-                closeAllProcesses();
-                items.style.display = 'flex';
-                this.classList.add('active');
-            } else {
-                items.style.display = 'none';
-                this.classList.remove('active');
-            }
+            items.style.display = items.style.display === 'none' ? 'flex' : 'none';
         });
     });
-
-    function closeAllProcesses() {
-        processes.forEach(p => {
-            p.querySelector('.process-items').style.display = 'none';
-            p.classList.remove('active');
-        });
-    }
 
     document.querySelectorAll('.process-items button').forEach(button => {
         button.addEventListener('click', function(e) {
             e.stopPropagation();
             const definition = definitions[this.textContent] || 'Definición no disponible';
             modalTitle.textContent = this.textContent;
-            modalDescription.textContent = definition;
+            modalContent.textContent = definition;
             modal.style.display = 'block';
         });
     });
@@ -61,6 +47,4 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
         }
     }
-
-    // Smooth scrolling for internal links (no internal links in current HTML, so this part is not needed here)
 });
