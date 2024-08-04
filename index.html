@@ -10,7 +10,7 @@
     <nav>
         <div class="logo">Hisense</div>
         <div class="menu">
-            <a href="#">Diagrama de modulos</a>
+         <a id="diagram-modules" href="#">Diagrama de modulos</a>
         </div>
     </nav>
     <div class="container">
@@ -76,5 +76,12 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+    document.getElementById('diagram-modules').addEventListener('click', function(event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        window.location.href = 'https://gael-hisense.github.io/DiagramaProceso.github.io/'; // Redirige al enlace
+    });
+</script>
+
 </body>
 </html>
